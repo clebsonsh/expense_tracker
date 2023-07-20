@@ -33,13 +33,13 @@ class ExpenseItem extends StatelessWidget {
               const Spacer(),
               Row(
                 children: [
-                  const Icon(
-                    Icons.alarm,
+                  Icon(
+                    categoryIcons[expense.category],
                     color: Colors.grey,
                   ),
-                  const SizedBox(width: 8),
+                  const SizedBox(width: 4),
                   Text(
-                    expense.date.toString(),
+                    expense.formattedDate,
                     style: const TextStyle(
                       color: Colors.grey,
                     ),
