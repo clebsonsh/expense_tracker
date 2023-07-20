@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'models/expense.dart';
-import 'expenses_list.dart';
+import 'package:expense_tracker/models/expense.dart';
+import 'package:expense_tracker/widgets/expenses_list/expenses_list.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
@@ -35,7 +35,7 @@ class _ExpensesState extends State<Expenses> {
     Expense(
       amount: 1699.99,
       date: DateTime.now().add(const Duration(days: -4)),
-      title: 'Laptop',
+      title: 'MacBook Air M2',
       category: Category.work,
     ),
   ];
