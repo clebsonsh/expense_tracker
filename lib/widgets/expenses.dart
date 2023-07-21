@@ -54,7 +54,7 @@ class _ExpensesState extends State<Expenses> {
       appBar: AppBar(
         title: const Text('Flutter Expenses Tracker'),
         actions: [
-          IconButton(
+          IconButton.filledTonal(
             onPressed: _openAddExpenseOverlay,
             icon: const Icon(
               Icons.add,
