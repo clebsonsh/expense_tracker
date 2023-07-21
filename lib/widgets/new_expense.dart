@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class NewExpense extends StatefulWidget {
@@ -10,16 +12,33 @@ class NewExpense extends StatefulWidget {
 }
 
 class _NewExpense extends State<NewExpense> {
+  var _enteredTitle = '';
+
+  void _saveTitleInputed(String inputedTitle) {
+    _enteredTitle = inputedTitle;
+  }
+
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(16),
+    return Padding(
+      padding: const EdgeInsets.all(16),
       child: Column(
         children: [
           TextField(
-            decoration: InputDecoration(labelText: 'Title'),
+            onChanged: _saveTitleInputed,
+            decoration: const InputDecoration(labelText: 'Title'),
             maxLength: 50,
           ),
+          Row(
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  print(_enteredTitle);
+                },
+                child: const Text('Save Expense'),
+              ),
+            ],
+          )
         ],
       ),
     );
