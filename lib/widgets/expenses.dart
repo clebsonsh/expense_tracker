@@ -27,24 +27,18 @@ class _ExpensesState extends State<Expenses> {
       title: 'Cinema',
       category: Category.leisure,
     ),
-    Expense(
-      amount: 20.99,
-      date: DateTime.now().add(const Duration(days: -1)),
-      title: 'Groceries',
-      category: Category.food,
-    ),
-    Expense(
-      amount: 1699.99,
-      date: DateTime.now().add(const Duration(days: -4)),
-      title: 'MacBook Air M2',
-      category: Category.work,
-    ),
   ];
+
+  void addExpense(Expense expense) {
+    setState(() {
+      _registeredExpenses.add(expense);
+    });
+  }
 
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
       context: context,
-      builder: (ctx) => const NewExpense(),
+      builder: (ctx) => NewExpense(addExpense: addExpense),
     );
   }
 
