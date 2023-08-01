@@ -33,17 +33,9 @@ class ExpenseItem extends StatelessWidget {
               const Spacer(),
               Row(
                 children: [
-                  Icon(
-                    categoryIcons[expense.category],
-                    color: Colors.grey,
-                  ),
+                  Icon(categoryIcons[expense.category]),
                   const SizedBox(width: 4),
-                  Text(
-                    expense.formattedDate,
-                    style: const TextStyle(
-                      color: Colors.grey,
-                    ),
-                  ),
+                  Text(expense.formattedDate),
                 ],
               ),
             ],
