@@ -15,6 +15,25 @@ void main() {
           backgroundColor: kColorScheme.onPrimaryContainer,
           foregroundColor: kColorScheme.primaryContainer,
         ),
+        cardTheme: const CardTheme().copyWith(
+          margin: const EdgeInsets.symmetric(
+            horizontal: 16,
+            vertical: 8,
+          ),
+          color: kColorScheme.secondaryContainer,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: kColorScheme.primaryContainer,
+          ),
+        ),
+        textTheme: ThemeData().textTheme.copyWith(
+              titleLarge: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.normal,
+                color: kColorScheme.onSecondaryContainer,
+              ),
+            ),
       ),
       home: const Expenses(),
     ),

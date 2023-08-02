@@ -15,8 +15,8 @@ class ExpenseItem extends StatelessWidget {
     return Card(
       child: Padding(
         padding: const EdgeInsets.symmetric(
-          horizontal: 20,
-          vertical: 16,
+          horizontal: 24,
+          vertical: 20,
         ),
         child: Column(children: [
           Text(expense.title),
