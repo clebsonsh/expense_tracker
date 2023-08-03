@@ -1,7 +1,7 @@
-import 'package:expense_tracker/widgets/new_expense.dart';
 import 'package:flutter/material.dart';
 
 import 'package:expense_tracker/models/expense.dart';
+import 'package:expense_tracker/widgets/new_expense.dart';
 import 'package:expense_tracker/widgets/expenses_list/expenses_list.dart';
 
 class Expenses extends StatefulWidget {
@@ -83,10 +83,13 @@ class _ExpensesState extends State<Expenses> {
       appBar: AppBar(
         title: const Text('Flutter Expenses Tracker'),
         actions: [
-          IconButton.filledTonal(
-            onPressed: _openAddExpenseOverlay,
-            icon: const Icon(
-              Icons.add,
+          Container(
+            margin: const EdgeInsets.only(right: 8),
+            child: IconButton(
+              onPressed: _openAddExpenseOverlay,
+              icon: const Icon(
+                Icons.add,
+              ),
             ),
           ),
         ],
